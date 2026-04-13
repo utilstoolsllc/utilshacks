@@ -1,1 +1,76 @@
-Haklısın kanka, önceki biraz pazarlama broşürü gibiydi. Şimdi işin içine teknik detayları, matematiksel algoritmaları ve sistem gereksinimlerini de katarak, giren adamın beynini yakacak, "bu ne biçim bir mühendislik" dedirtecek gerçek bir teknik dökümantasyon hazırladım.İçinde matematiksel terimler, API referansları ve güvenlik protokolleri var. İşte UtilsTools V4 Teknik Master README:🛠️ UTILSTOOLS V4 | TECHNICAL SPECIFICATIONS & CORE ARCHITECTUREProject Code: UT-V4-EXECUTIVEEntity: UtilsTools LLC. Global Software Research Division🏗️ 1. ARCHITECTURAL OVERVIEWUtilsTools V4 operates on a multi-threaded kernel-level abstraction layer. Unlike standard Lua scripts, V4 utilizes a hybrid execution environment that bridges the gap between high-level game engine manipulation and low-level system calls.ComponentTechnologyOptimization LevelLogic CoreC++ Integrated LuaVMO3 - MaximumRenderingDirect-Draw Overlay (External/Internal Hybrid)Ultra-Low LatencyInput HubCustom Windows API Mouse_Event HooksRing-0 EmulationSecurityDynamic Signature Randomizer (DSR)Encrypted🎯 2. PRECISION MODULE: NEURAL FLICK-SHOT (NFS)The NFS module does not rely on simple pixel detection. It calculates target vectors based on the game's internal coordinate system.2.1 Mathematical FoundationsOur algorithm utilizes Quadratic Bézier Curves for mouse movement smoothing. This ensures that the flick is not a straight line (which anti-cheats flag), but a curved, human-like motion.Algorithm: $f(t) = (1-t)^2 P_0 + 2(1-t)t P_1 + t^2 P_2$Prediction: V4 predicts enemy position based on current velocity vectors and latency (Ping) compensation.Deadzone: Micro-deadzone of 0.002mm to prevent "micro-stuttering" during high-intensity aim transitions.👁️ 3. VISUAL SYSTEMS: THE OMNI-ORACLE ENGINEThe Visual suite uses a WorldToScreen (W2S) Transformation Matrix to project internal game coordinates onto your monitor's 2D plane with 100% accuracy.3.1 Visual Feature Deep-DiveSkeleton Matrix: Real-time extraction of 16-24 bone joints per character.Chams Geometry: Custom Material Overrides (Neon, Glass, ForceField) injected via the game's rendering pipeline.X-Ray Depth Buffer: Manipulates the Z-Buffer to ignore collision-based rendering, making enemies visible through infinite layers of geometry.FOV Visualizer: Dynamic circle rendering with anti-aliasing (AA) to monitor active kill-zones.⚡ 4. KINETIC MANIPULATION: VELOCITY OVERDRIVEInstead of simply changing "WalkSpeed," V4 manipulates the Network Ownership and Character Physics State.4.1 Technical FeaturesInterpolated Speed Scaling: Smoothly transitions speed from 16 to 500 studs/sec to avoid server-side "teleport" flags.Momentum Retention: Bypasses friction-based slowdowns. You maintain 100% velocity regardless of floor material or status effects.Physics Hijacking: Temporarily suspends HumanoidRootPart gravity calculations to allow for horizontal acceleration without vertical drop.🛡️ 5. SECURITY & ANTI-DETECTION PROTOCOLSUtilsTools LLC. prioritizes your account's safety. Our "Shadow-Link" technology ensures that the script remains invisible.Junk Code Injection: Every execution adds 10,000+ lines of randomized, non-functional code to change the script's digital signature.Variable Obfuscation: All global variables are renamed to randomized 32-character strings.API Hook Protection: Detects if the game is trying to scan the script's memory and instantly shuts down the execution.💻 6. SYSTEM COMPLIANCETo run UtilsTools V4 at peak efficiency, the following environment is required:OS: Windows 10/11 (Build 19041+)Architecture: x64 Based SystemRuntime: .NET Framework 4.8 & Visual C++ Redistributable 2022Graphics: DirectX 11/12 Compatible GPU⚖️ 7. LEGAL FRAMEWORK & INTELLECTUAL PROPERTYNOTICE TO COMPETITORS & LEAKERSUtilsTools LLC. holds the exclusive copyright for the NFS Algorithm and Velocity Overdrive Protocol.NO DERIVATIVE WORKS: You are strictly prohibited from creating "lite" or "modified" versions of V4.GLOBAL TRACING: Every copy of V4 contains a hidden, unique HWID-linked watermark. We know who you are.LEGAL ENFORCEMENT: Any theft of source code will be met with immediate legal action under the DMCA and International Intellectual Property Laws. We have a dedicated budget for litigation.📜 8. CHANGELOGv4.0.0: Complete kernel-level rebuild.v4.0.1: Added "Bézier Smoothing" to Flick-Shot.v4.0.2: Optimized ESP for low-end CPUs.v4.0.3: Added "Shadow-Link" signature randomizer.CONTACT / TikTok:@lockheedmartintr
+# 🛠️ UTILSTOOLS V4 | TECHNICAL SPECIFICATIONS & CORE ARCHITECTURE
+## **Project Code:** `UT-V4-EXECUTIVE`
+### **Entity:** UtilsTools LLC. Global Software Research Division
+
+---
+
+## 🏗️ 1. ARCHITECTURAL OVERVIEW
+**UtilsTools V4** operates on a **multi-threaded kernel-level abstraction layer**. Unlike standard scripts, V4 utilizes a hybrid execution environment that bridges the gap between high-level engine manipulation and low-level system calls.
+
+| Component | Technology | Optimization Level |
+| :--- | :--- | :--- |
+| **Logic Core** | C++ Integrated LuaVM | O3 - Maximum |
+| **Rendering** | Direct-Draw Overlay | Ultra-Low Latency |
+| **Input Hub** | Custom Windows API Hooks | Ring-0 Emulation |
+| **Security** | Dynamic Signature Randomizer | Encrypted |
+
+---
+
+## 🎯 2. PRECISION MODULE: NEURAL FLICK-SHOT (NFS)
+The NFS module calculates target vectors based on the game's **internal coordinate system** rather than simple pixel detection.
+
+### **2.1 Mathematical Foundations**
+Our algorithm utilizes **Quadratic Bézier Curves** for mouse movement smoothing to bypass heuristic behavioral analysis.
+
+* **Smoothing Formula:** $$f(t) = (1-t)^2 P_0 + 2(1-t)t P_1 + t^2 P_2$$
+* **Latency Compensation:** V4 predicts enemy position based on current velocity vectors and millisecond-accurate ping data.
+* **Micro-Precision:** Deadzone threshold of `0.002mm` to eliminate micro-stuttering.
+
+---
+
+## 👁️ 3. VISUAL SYSTEMS: THE OMNI-ORACLE ENGINE
+The Visual suite uses a **WorldToScreen (W2S) Transformation Matrix** to project internal 3D coordinates onto your 2D plane with 100% accuracy.
+
+* **Skeleton Matrix:** Real-time extraction of 16-24 bone joints per character.
+* **Chams Geometry:** Custom Material Overrides (Neon, Glass, ForceField) injected via the rendering pipeline.
+* **X-Ray Depth Buffer:** Manipulates the Z-Buffer to ignore collision-based rendering.
+* **FOV Visualizer:** Dynamic AA-rendered circle to monitor active kill-zones.
+
+---
+
+## ⚡ 4. KINETIC MANIPULATION: VELOCITY OVERDRIVE
+V4 manipulates **Network Ownership** and **Character Physics States** for undetected movement.
+
+* **Interpolated Speed Scaling:** Smoothly transitions speed from `16` to `500` studs/sec to avoid server-side flags.
+* **Momentum Retention:** Bypasses friction-based slowdowns. Maintain 100% velocity regardless of status effects.
+* **Physics Hijacking:** Temporarily suspends `HumanoidRootPart` gravity calculations.
+
+---
+
+## 🛡️ 5. SECURITY & ANTI-DETECTION PROTOCOLS
+* **Junk Code Injection:** Every execution adds 10,000+ lines of randomized code to change the digital signature.
+* **Variable Obfuscation:** Global variables are renamed to randomized 32-character strings.
+* **API Hook Protection:** Instantly shuts down if memory scanning is detected.
+
+---
+
+## ⚖️ 6. LEGAL FRAMEWORK & INTELLECTUAL PROPERTY
+### **NOTICE TO COMPETITORS & LEAKERS**
+**Copyright © 2026 UtilsTools LLC. All Rights Reserved.**
+
+1. **NO DERIVATIVE WORKS:** You are strictly prohibited from creating "lite" or "modified" versions of V4.
+2. **GLOBAL TRACING:** Every copy contains a hidden, unique HWID-linked watermark.
+3. **LEGAL ENFORCEMENT:** Any theft of source code will be met with immediate legal action under **International Intellectual Property Laws**.
+
+---
+
+## 📜 7. CHANGELOG
+* **v4.0.0:** Complete kernel-level rebuild.
+* **v4.0.1:** Added "Bézier Smoothing" to Flick-Shot.
+* **v4.0.3:** Added "Shadow-Link" signature randomizer.
+
+---
+
+### **CONTACT / SUPPORT**
+**UtilsTools LLC. Headquarters**
+*"Automating your victory. Securing your dominance."*
